@@ -13,12 +13,14 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    var lastItem = 0;
-    for (var k in storage) {
-      lastItem++;
+    var deletedItem, valueToDelete;
+    for (var i in storage) {
+      deletedItem = storage[i];
+      valueToDelete = i;
+      break;
     }
-    count--;
-    return delete storage[lastItem - 1];
+    delete storage[valueToDelete];
+    return deletedItem;
   };
 
   someInstance.size = function() {
