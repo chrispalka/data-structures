@@ -8,7 +8,6 @@ var LinkedList = function() {
   // n2 = {data: 200}
 
   // n1.next = n2
-
   list.addToTail = function(value) {
     var newNode = new Node(value);
     if (this.head === null) {
@@ -56,3 +55,7 @@ var Node = function(value) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+// list.addToTail = O(1)
+// list.removeHead = O(1)
+// list.contains = O(n)
